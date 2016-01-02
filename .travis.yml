@@ -4,5 +4,8 @@ node_js:
 install:
   - npm install
 before_script:
-  - npm install -g gulp
-script: gulp --gulpfile gulpfileCI.js
+  - npm install -g gulp mocha
+script: {
+    "gulp": "gulp --gulpfile gulpfileCI.js"
+    "test": "mocha test/test.js"
+}
