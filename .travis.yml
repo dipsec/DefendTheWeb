@@ -6,6 +6,5 @@ install:
 before_script:
   - npm install -g gulp mocha
 script: {
-    "gulp": "gulp --gulpfile gulpfileCI.js"
-    "test": "mocha test/test.js"
-}
+  - gulp --gulpfile gulpfileCI.js
+  - mocha test/test.js
