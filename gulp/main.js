@@ -74,4 +74,10 @@ module.exports = function() {
             }
         });
     })
+
+    // Testing
+    gulp.task('test', function () {
+        return gulp.src('test/test.js', {read: false})
+            .pipe(mocha());
+    });
 }
