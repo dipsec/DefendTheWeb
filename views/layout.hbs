@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>{{title}}</title>
+    	<meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=1">
+        <!--[if lt IE 9]>
+          <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/r29/html5.min.js"></script>
+        <![endif]-->
+        <link href="https://fonts.googleapis.com/css?family=Lato:300" rel="stylesheet" type="text/css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+
+        <link rel="stylesheet" href="css/schema.css" />
+        <link rel="stylesheet" href="css/style.css" />
+        {{#each extra.styles}}
+            <script src="{{this}}"></script>
+        {{/each}}
+    </head>
+    <body>
+{{{body}}}
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+        <script src="js/script.min.js"></script>
+        {{#each extra.scripts}}
+            <script src="{{this}}"></script>
+        {{/each}}
+    </body>
+</html>
