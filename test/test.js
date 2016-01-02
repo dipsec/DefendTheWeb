@@ -4,6 +4,6 @@ describe('Student', function () {
     var student = { classes: [ 'English', 'Maths', 'Science' ] }
 
     it('should have correct number of classes', function () {
-        assert.equal('Maths', student.classes[0]);
+        assert.equal('Maths', student.classes[1]);
     })
 })
