@@ -1,0 +1,14 @@
+        {{#if layout}}
+            {{> nav}}
+            {{> sidebar}}
+        {{/if}}
+
+        <div id="content" class="container">
+            <div class="btn-group" style="float: right">
+                <button class="btn btn-default">Submit edit</button>
+                <button class="btn btn-default">Report issue</button>
+                <button class="btn btn-default">Need help?</button>
+            </div>
+
+            {{{content}}}
+        </div>

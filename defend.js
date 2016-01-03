@@ -22,7 +22,9 @@ app.use(express.static('static'));
 
 app.get('/', site.index);
 
-app.get('/course', course.index);
+app.get('/course', course.view);
+app.get('/course/:course', course.view);
+app.get('/course/:course/:lesson', course.view);
 
 app.get('/posts', post.list);
 app.get('/post/:slug', post.view);

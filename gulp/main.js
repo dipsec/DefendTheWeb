@@ -30,8 +30,11 @@ module.exports = function() {
 
     // Compile our Sass
     gulp.task('sass', function() {
+        var s = sass();
+        s.on('error', function() { console.log("Error processing SASS"); this.emit('end'); });
+
         return gulp.src('src/css/*.scss')
-            .pipe(sass())
+            .pipe(s)
             .pipe(gulp.dest('static/css'));
     });
 
@@ -60,8 +63,7 @@ module.exports = function() {
         gulp.watch('src/css/*.scss', ['sass']);
         gulp.watch('src/css/*.css', ['css']);
 
-        gulp.watch('defend.js', ['launch']);
-        gulp.watch('routes/*.js', ['launch']);
+        gulp.watch(['defend.js', 'routes/*.js', 'views/partials/*.hbs'], ['launch']);
     });
 
     // Launch server

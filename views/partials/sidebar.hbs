@@ -1,0 +1,31 @@
+<nav id="sidebar">
+            <ul>
+                <li class="label">Courses</li>
+                {{#each courses}}
+                    <li class="{{#if lessons}}has-children{{/if}} {{#if selected}}selected{{/if}}">
+                        <a href="/course/{{@key}}">Course {{@index}}: {{ title }}</a>
+
+                        {{#if lessons}}
+                        <ul>
+                            {{#each lessons}}
+                                <li {{#if selected}}class="active"{{/if}}><a href="/course/{{@../key}}/{{@key}}">{{@../index}}.{{@index}} {{ title }}</a></li>
+                            {{/each}}
+                        </ul>
+                        {{/if}}
+                    </li>
+                {{/each}}
+            </ul>
+
+            <ul>
+                <li class="label">Account</li>
+                <li class="has-children notifications">
+                    <a href="#0">Notifications<span class="count">3</span></a>
+                    
+                    <ul>
+                        <li><a href="#0">All Notifications</a></li>
+                        <li><a href="#0">Friends</a></li>
+                        <li><a href="#0">Other</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>

@@ -1,0 +1,24 @@
+<header>
+        <a href="/" class="logo">Defend the Web</a>
+        
+        {{#if breadcrumb}}
+            <ul class="breadcrumb">
+                <li><a href='#'>XSS</a></li>
+                <li><a href='#'>Your first exploit</a></li>
+            </ul>
+        {{/if}}
+
+        <nav>
+            <ul>
+                <li class="has-children">
+                    <a class="account" href="/">
+                        <img src="/imgs/anon.png" alt="avatar">
+                        Anonymous
+                    </a>
+                    <ul>
+                        <li><a href="/login">Login</a></li>
+                        <li><a href="/login">Register</a></li>
+                    </ul>
+                </li>
+        </nav>
+</header>
