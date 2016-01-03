@@ -9,17 +9,17 @@
         <link href="https://fonts.googleapis.com/css?family=Lato:300" rel="stylesheet" type="text/css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
 
-        <link rel="stylesheet" href="css/schema.css" />
-        <link rel="stylesheet" href="css/style.css" />
+        <link rel="stylesheet" href="/css/schema.css" />
+        <link rel="stylesheet" href="/css/style.css" />
         {{#each extra.styles}}
-            <script src="{{this}}"></script>
+            <link rel="stylesheet" href="{{this}}" />
         {{/each}}
     </head>
-    <body>
+    <body{{#if extra.classes}} class="{{extra.classes}}"{{/if}}>
 {{{body}}}
 
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
-        <script src="js/script.min.js"></script>
+        <script src="/js/script.min.js"></script>
         {{#each extra.scripts}}
             <script src="{{this}}"></script>
         {{/each}}

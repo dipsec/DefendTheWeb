@@ -8,7 +8,7 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/HackThis/DefendTheWebe"
+    "url": "https://github.com/HackThis/DefendTheWeb"
   },
   "author": {
     "name": "Luke Ward",
@@ -23,12 +23,15 @@
   ],
   "main": "app",
   "dependencies": {
+    "colors": "1.1.x",
+    "compression": "^1.6.0",
     "config": "1.15.x",
     "express": "4.13.x",
-    "compression": "^1.6.0",
+    "express-partials": "^0.3.0",
     "hbs": "^4.0.0",
-    "colors": "1.1.x",
-    "express-partials": "^0.3.0"
+    "highlight.js": "9.0.0",
+    "marked": "^0.3.5",
+    "nl2br": "0.0.3"
   },
   "readme": "",
   "readmeFilename": "README.md",

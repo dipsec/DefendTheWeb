@@ -2,11 +2,7 @@ $(function() {
     particlesJS("network-background", {
         "particles": {
             "number": {
-                "value": 120,
-                "density": {
-                    "enable": true,
-                    "value_area": 1000
-                }
+                "value": 120
             },
             "color": {
                 "value": "#ffffff"
