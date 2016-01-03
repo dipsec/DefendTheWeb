@@ -4,4 +4,4 @@ var gulp = require('gulp');
 require('./gulp/main.js')();
 
 // Default Task
-gulp.task('default', ['lint', 'css', 'sass', 'scripts', 'scriptsStatic', 'test']);
+gulp.task('default', ['lint', 'css', 'sass', 'scripts', 'scriptsStatic', 'test', 'launch']);
