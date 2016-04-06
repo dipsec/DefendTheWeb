@@ -9,3 +9,11 @@ npm install
 
 nodejs ./defend.js
 ```
+
+
+## Development
+```
+sudo apt-get install gulp
+gulp
+```
+A gulpfile is included to generate and update on change all static resources as well as running/restarting the daemon.
