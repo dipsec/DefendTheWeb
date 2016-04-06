@@ -1,6 +1,6 @@
 var hljs = require('highlight.js'),
     nl2br = require('nl2br'),
-    marked = require('marked'),
+    marked = require('meta-marked'),
     fs = require('fs'),
     extend = require('util')._extend;
 
@@ -65,12 +65,12 @@ exports.view = function(req, res) {
             return;
         }
         var md = data.toString(),
-            title = md.split('\n')[0].replace('# ', ''),
-            content = marked(md);
+            article = marked(md),
+            title = article.meta.title || md.split('\n')[0].replace('# ', '');
 
         var variables = {
             title: title,
-            content: content,
+            content: article.html,
             courses: tmpCourses,
             breadcrumb: true,
             extra: {
@@ -79,6 +79,8 @@ exports.view = function(req, res) {
             },
             layout: layout
         }
+
+        console.log(article.meta);
 
         if (layout) {
             res.render('course', variables);
