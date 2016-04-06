@@ -278,8 +278,7 @@ body.home article:nth-child(2n) {
 
 /* Course */
 body.course #content {
-  margin-top: 40px;
-  margin-bottom: 60px;
+  margin: 40px 60px 80px 290px;
   line-height: 1.6em; }
   body.course #content p {
     line-height: 1.6em; }
@@ -303,6 +302,9 @@ body.course #content {
     list-style-type: lower-latin;
     list-style-position: inside;
     margin-left: 15px; }
+  @media only screen and (max-width: 1530px) {
+    body.course #content {
+      width: auto; } }
 
 /* Loader */
 .loader {
