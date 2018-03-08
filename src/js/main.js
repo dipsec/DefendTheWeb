@@ -47,7 +47,7 @@ $(function() {
         highlightSidebarItem(this);
 
         $.get(url, function(data) {
-            $("#content").html(data.content);
+            $("#content").replaceWith(data.content);
             document.title = data.title + ' | Defend the Web';
             window.history.pushState({"html": data.content, "url": url, "pageTitle": document.title}, "", url);
         });

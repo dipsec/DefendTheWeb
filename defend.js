@@ -4,8 +4,7 @@ var compression = require('compression'),
 	app = express();
 
 var site = require('./routes/site'),
-    course = require('./routes/course'),
-	post = require('./routes/post');
+    course = require('./routes/course');
 
 const PORT = 8080;
 
@@ -25,9 +24,6 @@ app.get('/', site.index);
 app.get('/course', course.view);
 app.get('/course/:course', course.view);
 app.get('/course/:course/:lesson', course.view);
-
-app.get('/posts', post.list);
-app.get('/post/:slug', post.view);
 
 var server = app.listen(PORT, function() {
 	var host = server.address().address;
